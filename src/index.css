@@ -2,11 +2,13 @@
 
 :root {
   --colorDark: #333;
+  --colorMedium: #ccc;
   --colorLight: #fff;
   --colorPrimary: red;
   --colorSecondary: blue;
   --borderRadius: 3px;
   --transition: all 0.3s ease;
+  --fontFamily: 'Raleway', sans-serif;
 }
 
 * {
@@ -16,11 +18,15 @@
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--fontFamily);
   line-height: 1.5;
   letter-spacing: 2px;
   font-size: 18px;
   color: var(--colorDark);
+}
+
+li {
+  list-style: none;
 }
 
 .title {
@@ -34,4 +40,50 @@ body {
 
 .title p {
   color: var(--colorSecondary);
+}
+
+.btn-container {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.btn-container button {
+  background: transparent;
+  border: none;
+  margin: 0 1rem;
+  font-size: 1.1rem;
+  font-family: var(--fontFamily);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.info-container {
+  padding: 1rem;
+}
+
+.info-container li {
+  margin: 1rem 0;
+}
+
+.info-container h4 {
+  background-color: var(--colorSecondary);
+  display: inline-block;
+  color: var(--colorLight);
+  margin: 0.25rem 0;
+  padding: 0.24rem;
+  border-radius: var(--borderRadius);
+}
+
+.info-container li {
+  display: flex;
+  align-items: center;
+}
+
+.info-container li .icon {
+  font-size: 3rem;
+  color: var(--colorPrimary);
+  margin-right: 2rem;
 }

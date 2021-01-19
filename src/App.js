@@ -28,7 +28,7 @@ function App() {
   return (
     <div className="App">
       <Title />
-      <Resume currentJob={currentJob} />
+      <Resume currentJob={currentJob} jobs={jobs} />
     </div>
   )
 }
