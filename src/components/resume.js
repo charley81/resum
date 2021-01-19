@@ -1,7 +1,7 @@
 import React from 'react'
 import { AiFillCaretRight } from 'react-icons/ai'
 
-const Resume = ({ currentJob, jobs, getJob }) => {
+const Resume = ({ currentJob, jobs, getJob, indexValue }) => {
   const { company, dates, duties, title } = currentJob
 
   return (
@@ -10,7 +10,11 @@ const Resume = ({ currentJob, jobs, getJob }) => {
       <div className="btn-container">
         {jobs.map((item, index) => {
           return (
-            <button key={index} onClick={() => getJob(index)}>
+            <button
+              key={index}
+              onClick={() => getJob(index)}
+              className={`${index === indexValue && 'current'}`}
+            >
               {item.company}
             </button>
           )
