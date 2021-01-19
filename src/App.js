@@ -25,10 +25,14 @@ function App() {
     return <h1 className="loading">Loading...</h1>
   }
 
+  const getJob = index => {
+    setIndex(index)
+  }
+
   return (
     <div className="App">
       <Title />
-      <Resume currentJob={currentJob} jobs={jobs} />
+      <Resume currentJob={currentJob} jobs={jobs} getJob={getJob} />
     </div>
   )
 }
